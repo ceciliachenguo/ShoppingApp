@@ -9,16 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(foods) { food in
+                    
+                    NavigationLink {
+                        FoodDetailView(food: food)
+                    } label: {
+                        FoodItemView(food: food)
+                    }
+                }
+            }
+            .listStyle(.insetGrouped)
+            .navigationTitle("Menu")
+            
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

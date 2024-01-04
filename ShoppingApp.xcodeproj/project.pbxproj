@@ -14,6 +14,9 @@
 		8D9FFBB22B464DB600BDCB82 /* ShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBB12B464DB600BDCB82 /* ShoppingAppTests.swift */; };
 		8D9FFBBC2B464DB600BDCB82 /* ShoppingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBBB2B464DB600BDCB82 /* ShoppingAppUITests.swift */; };
 		8D9FFBBE2B464DB600BDCB82 /* ShoppingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBBD2B464DB600BDCB82 /* ShoppingAppUITestsLaunchTests.swift */; };
+		8D9FFBCB2B464DF000BDCB82 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBCA2B464DF000BDCB82 /* Food.swift */; };
+		8D9FFBCD2B464E0600BDCB82 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBCC2B464E0600BDCB82 /* FoodDetailView.swift */; };
+		8D9FFBCF2B464E1B00BDCB82 /* FoodItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9FFBCE2B464E1B00BDCB82 /* FoodItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		8D9FFBB72B464DB600BDCB82 /* ShoppingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9FFBBB2B464DB600BDCB82 /* ShoppingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppUITests.swift; sourceTree = "<group>"; };
 		8D9FFBBD2B464DB600BDCB82 /* ShoppingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D9FFBCA2B464DF000BDCB82 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		8D9FFBCC2B464E0600BDCB82 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		8D9FFBCE2B464E1B00BDCB82 /* FoodItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				8D9FFBA22B464DB400BDCB82 /* ContentView.swift */,
 				8D9FFBA42B464DB600BDCB82 /* Assets.xcassets */,
 				8D9FFBA62B464DB600BDCB82 /* Preview Content */,
+				8D9FFBCA2B464DF000BDCB82 /* Food.swift */,
+				8D9FFBCC2B464E0600BDCB82 /* FoodDetailView.swift */,
+				8D9FFBCE2B464E1B00BDCB82 /* FoodItemView.swift */,
 			);
 			path = ShoppingApp;
 			sourceTree = "<group>";
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9FFBA32B464DB400BDCB82 /* ContentView.swift in Sources */,
+				8D9FFBCD2B464E0600BDCB82 /* FoodDetailView.swift in Sources */,
+				8D9FFBCF2B464E1B00BDCB82 /* FoodItemView.swift in Sources */,
 				8D9FFBA12B464DB400BDCB82 /* ShoppingAppApp.swift in Sources */,
+				8D9FFBCB2B464DF000BDCB82 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
