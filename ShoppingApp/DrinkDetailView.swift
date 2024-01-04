@@ -1,5 +1,5 @@
 //
-//  FoodDetailView.swift
+//  DrinkDetailView.swift
 //  ShoppingApp
 //
 //  Created by Cecilia Chen on 1/3/24.
@@ -7,34 +7,33 @@
 
 import SwiftUI
 
-struct FoodDetailView: View {
-    let food: Food
+struct DrinkDetailView: View {
+    let drink: Drink
     
     var body: some View {
         List {
-            
             Section {
-                LabeledContent("Icon", value: food.name)
-                LabeledContent("Name", value: food.title)
+                LabeledContent("Icon", value: drink.name)
+                LabeledContent("Name", value: drink.title)
                 LabeledContent {
-                    Text(food.price,
+                    Text(drink.price,
                          format: .currency(code: Locale.current.currency?.identifier ?? ""))
                 } label: {
                     Text("Price")
                 }
+                LabeledContent("Fizzy?", value: drink.isFizzy ? "✅" : "❌")
             }
             
             Section("Description") {
-                Text(food.description)
+                Text(drink.description)
             }
-
         }
         .navigationTitle("Item")
     }
 }
 
-struct FoodDetailView_Previews: PreviewProvider {
+struct DrinkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodDetailView(food: foods[0])
+        DrinkDetailView(drink: drinks[0])
     }
 }
