@@ -1,14 +1,17 @@
 //
 //  DessertDetailView.swift
-//  ShoppingApp
+//  Introduction to NavigationStack
 //
-//  Created by Cecilia Chen on 1/3/24.
+//  Created by Tunde Adegoroye on 04/02/2023.
 //
 
 import SwiftUI
 
 struct DessertDetailView: View {
     
+    @EnvironmentObject private var cartManager: ShoppingCartManager
+    @EnvironmentObject private var routeManager: NavigationRouter
+
     let dessert: Dessert
     
     var body: some View {
@@ -29,14 +32,29 @@ struct DessertDetailView: View {
             Section("Description") {
                 Text(dessert.description)
             }
+            
+            Section {
+                Button {
+                    cartManager.add(dessert)
+                    routeManager.reset()
+                } label: {
+                    Label("Add to cart", systemImage: "cart")
+                        .symbolVariant(.fill)
+                }
+            }
 
         }
-        .navigationTitle("Item")
+        .navigationTitle(dessert.title)
     }
 }
 
 struct DessertDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DessertDetailView(dessert: desserts[0])
+        NavigationStack {
+            
+            DessertDetailView(dessert: desserts[0])
+                .environmentObject(ShoppingCartManager())
+                .environmentObject(NavigationRouter())
+        }
     }
 }

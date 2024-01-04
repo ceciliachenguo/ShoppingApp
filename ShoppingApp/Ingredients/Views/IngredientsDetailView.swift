@@ -1,8 +1,8 @@
 //
 //  IngredientsDetailView.swift
-//  ShoppingApp
+//  Introduction to NavigationStack
 //
-//  Created by Cecilia Chen on 1/3/24.
+//  Created by Tunde Adegoroye on 06/02/2023.
 //
 
 import SwiftUI

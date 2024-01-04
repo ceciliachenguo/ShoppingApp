@@ -1,17 +1,22 @@
 //
 //  DrinkDetailView.swift
-//  ShoppingApp
+//  Introduction to NavigationStack
 //
-//  Created by Cecilia Chen on 1/3/24.
+//  Created by Tunde Adegoroye on 04/02/2023.
 //
 
 import SwiftUI
 
 struct DrinkDetailView: View {
+    
+    @EnvironmentObject private var cartManager: ShoppingCartManager
+    @EnvironmentObject private var routeManager: NavigationRouter
+
     let drink: Drink
     
     var body: some View {
         List {
+            
             Section {
                 LabeledContent("Icon", value: drink.name)
                 LabeledContent("Name", value: drink.title)
@@ -27,13 +32,28 @@ struct DrinkDetailView: View {
             Section("Description") {
                 Text(drink.description)
             }
+            
+            Section {
+                Button {
+                    cartManager.add(drink)
+                    routeManager.reset()
+                } label: {
+                    Label("Add to cart", systemImage: "cart")
+                        .symbolVariant(.fill)
+                }
+            }
+
         }
-        .navigationTitle("Item")
+        .navigationTitle(drink.title)
     }
 }
 
 struct DrinkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkDetailView(drink: drinks[0])
+        NavigationStack {
+            DrinkDetailView(drink: drinks[0])
+                .environmentObject(ShoppingCartManager())
+                .environmentObject(NavigationRouter())
+        }
     }
 }
